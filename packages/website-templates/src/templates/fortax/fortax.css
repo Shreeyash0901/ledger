@@ -1,0 +1,1091 @@
+/* ── Fortax Financial Advisory Template CSS ── */
+
+.fortax-root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--wb-bg, #ffffff);
+  color: var(--wb-text, #172b38);
+  font-family: var(--wb-font-body, "Inter", -apple-system, BlinkMacSystemFont, sans-serif);
+  line-height: 1.6;
+  box-sizing: border-box;
+}
+
+.fortax-root *,
+.fortax-root *::before,
+.fortax-root *::after {
+  box-sizing: border-box;
+}
+
+/* ── Sticky Modern Header ── */
+.ft-header {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.03);
+}
+
+.ft-header-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 16px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ft-brand {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.ft-brand-logo-text {
+  font-family: var(--wb-font-heading, "Playfair Display", Georgia, serif);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0d2838;
+  display: inline-flex;
+  align-items: baseline;
+}
+
+.ft-brand-logo-dot {
+  color: #e69526;
+  font-size: 28px;
+  line-height: 0;
+  margin-left: 2px;
+}
+
+.ft-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ft-nav-link {
+  color: #475569;
+  text-decoration: none;
+  font-size: 13.5px;
+  font-weight: 500;
+  transition: color 0.15s ease;
+  position: relative;
+}
+
+.ft-nav-link:hover {
+  color: #025a70;
+}
+
+.ft-header-btn {
+  background: #e69526;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(230, 149, 38, 0.25);
+}
+
+.ft-header-btn:hover {
+  background: #d48315;
+  transform: translateY(-1px);
+}
+
+/* ── Hero Section (Warm Cream Palette + Advisor Photo) ── */
+.ft-hero {
+  background: linear-gradient(135deg, #fbf8f3 0%, #f6f0e6 100%);
+  padding: 60px 24px 70px;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.ft-hero-inner {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.ft-hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ft-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(2, 90, 112, 0.08);
+  color: #025a70;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.ft-hero-title {
+  font-family: var(--wb-font-heading, "Playfair Display", Georgia, serif);
+  font-size: 46px;
+  font-weight: 800;
+  line-height: 1.18;
+  color: #0e2938;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.ft-hero-subtitle {
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: #526674;
+  margin: 0;
+  max-width: 540px;
+}
+
+.ft-hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.ft-btn-primary {
+  background: #025a70;
+  color: #ffffff;
+  padding: 13px 26px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.ft-btn-primary:hover {
+  background: #014354;
+  transform: translateY(-1px);
+}
+
+.ft-btn-secondary {
+  background: #ffffff;
+  color: #0e2938;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid #d8e0e5;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.ft-btn-secondary:hover {
+  background: #f1f5f9;
+  border-color: #cbd5e1;
+}
+
+.ft-hero-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ft-hero-photo-card {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(14, 41, 56, 0.12);
+  background: #ffffff;
+  border: 4px solid #ffffff;
+}
+
+.ft-hero-photo-img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ── Section Title Standard Header ── */
+.ft-section-header {
+  text-align: center;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.ft-section-pill {
+  display: inline-block;
+  background: #edf7fa;
+  color: #025a70;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 5px 14px;
+  border-radius: 16px;
+}
+
+.ft-section-title {
+  font-family: var(--wb-font-heading, "Playfair Display", Georgia, serif);
+  font-size: 34px;
+  font-weight: 700;
+  color: #0e2938;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.ft-section-title-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.ft-section-title-underline::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  width: 100%;
+  height: 3px;
+  background: #e69526;
+  border-radius: 2px;
+}
+
+/* ── How Can A Financial Advisor Help You? (Services Grid) ── */
+.ft-services-section {
+  padding: 80px 24px;
+  background: #ffffff;
+}
+
+.ft-services-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.ft-services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.ft-services-grid-row-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px;
+  max-width: 760px;
+  margin: 28px auto 0;
+}
+
+.ft-service-card {
+  background: #ffffff;
+  border: 1px solid #eef2f5;
+  border-radius: 10px;
+  padding: 28px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: all 0.25s ease;
+  position: relative;
+}
+
+.ft-service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(2, 90, 112, 0.08);
+  border-color: #d1e3ea;
+}
+
+.ft-service-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  background: #fdfaf6;
+  border: 1px solid #fae8d2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  color: #e69526;
+}
+
+.ft-service-name {
+  font-family: var(--wb-font-heading, "Playfair Display", Georgia, serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: #0e2938;
+  margin: 0 0 16px;
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ft-service-tags-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 24px;
+  min-height: 60px;
+}
+
+.ft-service-tag {
+  background: #f1f8fa;
+  color: #025a70;
+  font-size: 10.5px;
+  font-weight: 500;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #e0eff4;
+}
+
+.ft-service-btn {
+  background: #025a70;
+  color: #ffffff;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.ft-service-btn:hover {
+  background: #014354;
+}
+
+/* ── Getting Started is Easy (Split Section with Circle Badge Advisor) ── */
+.ft-easy-section {
+  padding: 90px 24px;
+  background: #faf8f5;
+  border-top: 1px solid rgba(0, 0, 0, 0.04);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.ft-easy-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.ft-easy-left {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ft-easy-title {
+  font-family: var(--wb-font-heading, "Playfair Display", Georgia, serif);
+  font-size: 36px;
+  font-weight: 700;
+  color: #0e2938;
+  margin: 0;
+}
+
+.ft-easy-intro {
+  font-size: 14.5px;
+  color: #5a6e7c;
+  line-height: 1.6;
+  margin: 0 0 10px;
+}
+
+.ft-easy-steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ft-step-item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.ft-step-icon-btn {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: #e2f0f4;
+  color: #025a70;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ft-step-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ft-step-heading {
+  font-size: 15px;
+  font-weight: 700;
+  color: #0e2938;
+  margin: 0;
+}
+
+.ft-step-desc {
+  font-size: 12.5px;
+  color: #64748b;
+  margin: 0;
+}
+
+.ft-easy-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.ft-advisor-circle-container {
+  position: relative;
+  width: 360px;
+  height: 360px;
+}
+
+.ft-advisor-circle-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 8px solid #ffffff;
+  box-shadow: 0 20px 40px rgba(14, 41, 56, 0.12);
+}
+
+.ft-advisor-stamp-badge {
+  position: absolute;
+  bottom: 24px;
+  left: 12px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #e69526;
+  border: 3px dashed #ffffff;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-shadow: 0 6px 16px rgba(230, 149, 38, 0.4);
+  animation: pulseBadge 3s infinite ease-in-out;
+}
+
+.ft-advisor-stamp-text-small {
+  font-size: 8.5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ft-advisor-stamp-text-large {
+  font-size: 10.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+@keyframes pulseBadge {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.04); }
+}
+
+/* ── Choose the Option That Best Fits Your Needs (Pricing 3-Card Matrix) ── */
+.ft-pricing-section {
+  padding: 85px 24px 95px;
+  background: #ffffff;
+}
+
+.ft-pricing-inner {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.ft-pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.ft-pricing-card {
+  background: #ffffff;
+  border: 1px solid #ebd9c2;
+  border-radius: 12px;
+  padding: 36px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 16px rgba(230, 149, 38, 0.05);
+}
+
+.ft-pricing-card.featured {
+  border: 2px solid #e69526;
+  box-shadow: 0 12px 36px rgba(230, 149, 38, 0.12);
+  transform: scale(1.02);
+}
+
+.ft-pricing-badge-popular {
+  position: absolute;
+  top: -12px;
+  background: #e69526;
+  color: #ffffff;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 3px 12px;
+  border-radius: 12px;
+}
+
+.ft-pricing-plan-name {
+  font-family: var(--wb-font-heading, "Playfair Display", Georgia, serif);
+  font-size: 20px;
+  font-weight: 700;
+  color: #0e2938;
+  margin: 0 0 6px;
+}
+
+.ft-pricing-starting-text {
+  font-size: 11px;
+  color: #94a3b8;
+  text-transform: lowercase;
+  margin-bottom: 8px;
+}
+
+.ft-pricing-amount {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0e2938;
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 3px;
+  margin-bottom: 22px;
+  font-family: var(--wb-font-body, sans-serif);
+}
+
+.ft-pricing-period {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 400;
+}
+
+.ft-pricing-btn {
+  background: #025a70;
+  color: #ffffff;
+  width: 100%;
+  padding: 11px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 28px;
+  transition: background 0.2s ease;
+}
+
+.ft-pricing-btn:hover {
+  background: #014354;
+}
+
+.ft-pricing-features-title {
+  font-size: 11px;
+  font-weight: 700;
+  color: #025a70;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 14px;
+  align-self: flex-start;
+}
+
+.ft-pricing-features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  text-align: left;
+}
+
+.ft-pricing-feature-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  color: #475569;
+}
+
+/* ── Your Questions, Answered (FAQ Section with Male Advisor) ── */
+.ft-faq-section {
+  padding: 85px 24px;
+  background: #f4f9fb;
+  border-top: 1px solid #e1eff3;
+}
+
+.ft-faq-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.ft-faq-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ft-faq-pill {
+  color: #e69526;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.ft-faq-title {
+  font-family: var(--wb-font-heading, "Playfair Display", Georgia, serif);
+  font-size: 34px;
+  font-weight: 700;
+  color: #0e2938;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.ft-faq-photo-wrapper {
+  margin-top: 16px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(2, 90, 112, 0.08);
+  background: #ffffff;
+  border: 4px solid #ffffff;
+  max-width: 380px;
+}
+
+.ft-faq-photo-img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  display: block;
+}
+
+.ft-faq-right {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ft-accordion-item {
+  background: #ffffff;
+  border: 1px solid #e1eff3;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.ft-accordion-trigger {
+  width: 100%;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0e2938;
+  gap: 12px;
+}
+
+.ft-accordion-trigger:hover {
+  color: #025a70;
+}
+
+.ft-accordion-body {
+  padding: 0 20px 16px;
+  font-size: 13px;
+  color: #526674;
+  line-height: 1.6;
+}
+
+/* ── Concierge Advisory Banner (Dark Cyan Background + 3-person team photo) ── */
+.ft-concierge-section {
+  background: #025a70;
+  color: #ffffff;
+  padding: 60px 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ft-concierge-inner {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.ft-concierge-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.ft-concierge-heading {
+  font-family: var(--wb-font-heading, "Playfair Display", Georgia, serif);
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.ft-concierge-highlight {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  border-bottom: 2px solid #e69526;
+  padding-bottom: 2px;
+}
+
+.ft-concierge-btn {
+  background: #e69526;
+  color: #ffffff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  transition: background 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.ft-concierge-btn:hover {
+  background: #d48315;
+}
+
+.ft-concierge-img-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.ft-concierge-photo {
+  max-width: 440px;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* ── Comprehensive Dark Footer (Fortax Style) ── */
+.ft-footer {
+  background: #09212f;
+  color: #94a3b8;
+  padding: 60px 24px 28px;
+  font-size: 13px;
+}
+
+.ft-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 40px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ft-footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ft-footer-logo-text {
+  font-family: var(--wb-font-heading, "Playfair Display", Georgia, serif);
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.ft-footer-desc {
+  font-size: 12.5px;
+  color: #8da4b4;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.ft-footer-socials {
+  display: flex;
+  gap: 10px;
+}
+
+.ft-footer-social-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #025a70;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.ft-footer-social-btn:hover {
+  background: #e69526;
+}
+
+.ft-footer-col-title {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 0 16px;
+  font-family: var(--wb-font-heading, "Playfair Display", Georgia, serif);
+}
+
+.ft-footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ft-footer-link {
+  color: #8da4b4;
+  text-decoration: none;
+  font-size: 12.5px;
+  transition: color 0.15s ease;
+}
+
+.ft-footer-link:hover {
+  color: #ffffff;
+}
+
+.ft-footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  color: #8da4b4;
+  font-size: 12.5px;
+}
+
+.ft-footer-contact-icon {
+  color: #025a70;
+  background: rgba(2, 90, 112, 0.3);
+  padding: 6px;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.ft-footer-bottom {
+  max-width: 1200px;
+  margin: 24px auto 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+  color: #64748b;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.ft-icai-notice-box {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-top: 24px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: #7e95a5;
+}
+
+/* ── Interactive Modal Drawer ── */
+.ft-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(14, 41, 56, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.ft-modal-window {
+  background: #ffffff;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 620px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  animation: modalScale 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes modalScale {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.ft-modal-header {
+  background: #fbf8f3;
+  padding: 18px 24px;
+  border-bottom: 1px solid #ebd9c2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ft-modal-title {
+  font-family: var(--wb-font-heading, "Playfair Display", Georgia, serif);
+  font-size: 18px;
+  font-weight: 700;
+  color: #0e2938;
+  margin: 0;
+}
+
+.ft-modal-close-btn {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.ft-modal-close-btn:hover {
+  background: #ebd9c2;
+  color: #0e2938;
+}
+
+.ft-modal-body {
+  padding: 24px;
+  overflow-y: auto;
+  max-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* ── Responsive Viewports ── */
+@media (max-width: 960px) {
+  .ft-hero-inner,
+  .ft-easy-inner,
+  .ft-faq-inner,
+  .ft-concierge-inner {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .ft-services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ft-pricing-grid {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .ft-footer-inner {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .ft-services-grid,
+  .ft-services-grid-row-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .ft-header-inner {
+    padding: 12px 16px;
+  }
+
+  .ft-nav-list {
+    display: none;
+  }
+
+  .ft-hero-title {
+    font-size: 32px;
+  }
+
+  .ft-footer-inner {
+    grid-template-columns: 1fr;
+  }
+}

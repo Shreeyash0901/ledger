@@ -1,0 +1,231 @@
+/* Shared parts CSS implementing the --tf-* token system used by Pulse and Ledger */
+
+.tf-nav-services {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.tf-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tf-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.tf-field span {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--tf-muted, #666);
+}
+
+.tf-field input,
+.tf-field select {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--tf-field, #fff);
+  border: 1.5px solid var(--tf-line, #ddd);
+  border-radius: var(--tf-radius, 8px);
+  color: var(--tf-ink, #111);
+  font: 500 15px var(--tf-body, sans-serif);
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tf-field input:focus,
+.tf-field select:focus {
+  border-color: var(--tf-accent, #5b3df5);
+  box-shadow: 0 0 0 3px rgba(91, 61, 245, 0.15);
+}
+
+.tf-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 500px) {
+  .tf-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tf-submit {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 20px;
+  margin-top: 6px;
+  background: var(--tf-accent, #5b3df5);
+  color: var(--tf-accent-ink, #fff);
+  border: 0;
+  border-radius: var(--tf-radius, 8px);
+  font: 700 15.5px var(--tf-body, sans-serif);
+  cursor: pointer;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+.tf-submit:hover {
+  opacity: 0.93;
+  transform: translateY(-1px);
+}
+
+.tf-done {
+  padding: 32px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.tf-done svg {
+  color: #10b981;
+}
+
+.tf-done h4 {
+  margin: 0;
+  font: 700 22px var(--tf-display, sans-serif);
+}
+
+.tf-done p {
+  margin: 0;
+  color: var(--tf-muted, #666);
+  font-size: 15px;
+}
+
+.tf-link-btn {
+  margin-top: 8px;
+  background: transparent;
+  border: 0;
+  color: var(--tf-accent, #5b3df5);
+  font: 700 14px var(--tf-body, sans-serif);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Footer layout */
+.tf-footer {
+  background: var(--tf-footer-bg, #0f172a);
+  color: var(--tf-footer-fg, #94a3b8);
+  padding: 72px 24px 36px;
+  font-family: var(--tf-body, sans-serif);
+}
+
+.tf-footer-grid {
+  max-width: 1160px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.6fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 900px) {
+  .tf-footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+}
+
+@media (max-width: 580px) {
+  .tf-footer-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.tf-footer-brand {
+  font: 800 22px var(--tf-display, sans-serif);
+  color: #fff;
+  margin-bottom: 12px;
+}
+
+.tf-footer p {
+  margin: 0 0 16px;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.tf-footer h4 {
+  margin: 0 0 18px;
+  font: 700 15px var(--tf-body, sans-serif);
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tf-footer ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tf-footer a {
+  color: var(--tf-footer-fg, #94a3b8);
+  text-decoration: none;
+  font-size: 14.5px;
+  transition: color 0.15s ease;
+}
+
+.tf-footer a:hover {
+  color: #fff;
+}
+
+.tf-footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.tf-footer-contact span {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tf-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.tf-socials a {
+  width: 32px;
+  height: 32px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  transition: background 0.15s ease;
+}
+
+.tf-socials a:hover {
+  background: var(--tf-accent, #5b3df5);
+}
+
+.tf-disclaimer {
+  max-width: 1160px;
+  margin: 40px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 12.5px;
+  line-height: 1.6;
+  opacity: 0.75;
+}
+
+.tf-footer-bottom {
+  max-width: 1160px;
+  margin: 16px auto 0;
+  font-size: 13px;
+  opacity: 0.75;
+}

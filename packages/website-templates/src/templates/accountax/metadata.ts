@@ -1,0 +1,77 @@
+import { TemplateMetadata } from "website-core";
+
+export const ACCOUNTAX_METADATA: TemplateMetadata = {
+  id: "accountax",
+  name: "Accountax Elite",
+  tagline: "High-Impact Black & Gold Corporate CA & Tax Advisory Template",
+  description: "Sophisticated black, white & vibrant gold design with dual-tone hero, 3-pillar highlight cards, and interactive practice scopes.",
+  category: "Corporate",
+  defaultTheme: {
+    primaryColor: "#0f172a",
+    accentColor: "#f59e0b",
+    backgroundColor: "#ffffff",
+    surfaceColor: "#f8fafc",
+    textColor: "#0f172a",
+    fontFamily: "Space Grotesk",
+    borderRadius: "md",
+  },
+  features: [
+    "High-Contrast Black & Gold Theme",
+    "3 Floating Highlight Hero Cards",
+    "Specialized Practice Photo Gallery",
+    "Compliance Due Dates Monitor",
+  ],
+  sections: [
+    {
+      id: "hero",
+      type: "hero",
+      label: "Hero Banner",
+      description: "Dual-tone black & gold hero headline, 3 highlight cards & callback form",
+      editorKey: "hero",
+      required: true,
+      defaultEnabled: true,
+    },
+    {
+      id: "services",
+      type: "services",
+      label: "Services & Practice Areas",
+      description: "Gold-accented corporate practice scopes and advisory desks",
+      editorKey: "services",
+      defaultEnabled: true,
+    },
+    {
+      id: "tax-calendar",
+      type: "tax-calendar",
+      label: "Statutory Due Dates",
+      description: "Gold-highlighted corporate tax filing timeline",
+      editorKey: "tax-calendar",
+      defaultEnabled: true,
+    },
+    {
+      id: "testimonials",
+      type: "testimonials",
+      label: "Client Endorsements",
+      description: "Enterprise & corporate client feedback summaries",
+      editorKey: "testimonials",
+      defaultEnabled: true,
+    },
+    {
+      id: "cta",
+      type: "cta",
+      label: "Call to Action Banner",
+      description: "Executive advisory consultation appointment strip",
+      editorKey: "cta",
+      defaultEnabled: true,
+    },
+    {
+      id: "contact",
+      type: "contact",
+      label: "Contact Information Desk",
+      description: "Lead form, branch address, contact channels & office directions",
+      editorKey: "contact",
+      required: true,
+      defaultEnabled: true,
+    },
+  ],
+};
+

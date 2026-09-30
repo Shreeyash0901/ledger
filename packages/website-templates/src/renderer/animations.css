@@ -1,0 +1,282 @@
+/* ─── ActiveDesk Global Template Animation & Visual Effects Engine ──────────────── */
+
+@keyframes wbFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes wbSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-32px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes wbZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes wbSubtleFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes wbPulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(15, 110, 86, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(15, 110, 86, 0);
+  }
+}
+
+@keyframes wbFloatGently {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+/* ─── Smooth Native Scrolling & Progress Indicator ──────────────── */
+.wb-isolated-canvas {
+  scroll-behavior: smooth;
+  position: relative;
+}
+
+.wb-scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--wb-primary, #0f6e56), var(--wb-accent, #1d9e75));
+  z-index: 9999;
+  transition: width 0.1s ease-out;
+  box-shadow: 0 0 10px rgba(15, 110, 86, 0.5);
+}
+
+/* ─── Base Page Entrance Animations (When Scroll Reveals are NOT active) ─── */
+.wb-isolated-canvas.wb-anim-enabled:not(.wb-scroll-anim-enabled) section {
+  animation-duration: var(--wb-anim-duration, 0.6s);
+  animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  animation-fill-mode: both;
+}
+
+.wb-isolated-canvas.wb-anim-enabled:not(.wb-scroll-anim-enabled).wb-anim-style-fade-up section {
+  animation-name: wbFadeUp;
+}
+
+.wb-isolated-canvas.wb-anim-enabled:not(.wb-scroll-anim-enabled).wb-anim-style-slide-in section {
+  animation-name: wbSlideIn;
+}
+
+.wb-isolated-canvas.wb-anim-enabled:not(.wb-scroll-anim-enabled).wb-anim-style-zoom section {
+  animation-name: wbZoomIn;
+}
+
+.wb-isolated-canvas.wb-anim-enabled:not(.wb-scroll-anim-enabled).wb-anim-style-subtle section {
+  animation-name: wbSubtleFade;
+}
+
+/* ─── Scroll-Triggered Reveal Animations (Intersection Observer) ─── */
+.wb-isolated-canvas.wb-scroll-anim-enabled .wb-reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity var(--wb-anim-duration, 0.65s) cubic-bezier(0.16, 1, 0.3, 1),
+              transform var(--wb-anim-duration, 0.65s) cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.wb-isolated-canvas.wb-scroll-anim-enabled .wb-reveal-on-scroll.wb-in-view {
+  opacity: 1 !important;
+  transform: translateY(0) scale(1) !important;
+}
+
+.wb-isolated-canvas.wb-scroll-anim-enabled.wb-anim-style-slide-in .wb-reveal-on-scroll {
+  transform: translateX(-40px);
+}
+.wb-isolated-canvas.wb-scroll-anim-enabled.wb-anim-style-slide-in .wb-reveal-on-scroll.wb-in-view {
+  transform: translateX(0) !important;
+}
+
+.wb-isolated-canvas.wb-scroll-anim-enabled.wb-anim-style-zoom .wb-reveal-on-scroll {
+  transform: scale(0.92);
+}
+.wb-isolated-canvas.wb-scroll-anim-enabled.wb-anim-style-zoom .wb-reveal-on-scroll.wb-in-view {
+  transform: scale(1) !important;
+}
+
+.wb-isolated-canvas.wb-scroll-anim-enabled.wb-anim-style-subtle .wb-reveal-on-scroll {
+  transform: none;
+}
+.wb-isolated-canvas.wb-scroll-anim-enabled.wb-anim-style-subtle .wb-reveal-on-scroll.wb-in-view {
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+/* ─── Staggered animation delays for child cards ──────────────── */
+.wb-isolated-canvas.wb-anim-enabled .apex-service-card:nth-child(1),
+.wb-isolated-canvas.wb-anim-enabled .fintech-card:nth-child(1),
+.wb-isolated-canvas.wb-anim-enabled .trust-practice-card:nth-child(1),
+.wb-isolated-canvas.wb-anim-enabled .minimal-service-item:nth-child(1),
+.wb-isolated-canvas.wb-anim-enabled .easy-card:nth-child(1),
+.wb-isolated-canvas.wb-anim-enabled .accountax-card:nth-child(1),
+.wb-isolated-canvas.wb-anim-enabled .fortax-card:nth-child(1) {
+  animation-delay: 0.06s;
+}
+
+.wb-isolated-canvas.wb-anim-enabled .apex-service-card:nth-child(2),
+.wb-isolated-canvas.wb-anim-enabled .fintech-card:nth-child(2),
+.wb-isolated-canvas.wb-anim-enabled .trust-practice-card:nth-child(2),
+.wb-isolated-canvas.wb-anim-enabled .minimal-service-item:nth-child(2),
+.wb-isolated-canvas.wb-anim-enabled .easy-card:nth-child(2),
+.wb-isolated-canvas.wb-anim-enabled .accountax-card:nth-child(2),
+.wb-isolated-canvas.wb-anim-enabled .fortax-card:nth-child(2) {
+  animation-delay: 0.14s;
+}
+
+.wb-isolated-canvas.wb-anim-enabled .apex-service-card:nth-child(3),
+.wb-isolated-canvas.wb-anim-enabled .fintech-card:nth-child(3),
+.wb-isolated-canvas.wb-anim-enabled .trust-practice-card:nth-child(3),
+.wb-isolated-canvas.wb-anim-enabled .minimal-service-item:nth-child(3),
+.wb-isolated-canvas.wb-anim-enabled .easy-card:nth-child(3),
+.wb-isolated-canvas.wb-anim-enabled .accountax-card:nth-child(3),
+.wb-isolated-canvas.wb-anim-enabled .fortax-card:nth-child(3) {
+  animation-delay: 0.22s;
+}
+
+.wb-isolated-canvas.wb-anim-enabled .apex-service-card:nth-child(4),
+.wb-isolated-canvas.wb-anim-enabled .fintech-card:nth-child(4),
+.wb-isolated-canvas.wb-anim-enabled .trust-practice-card:nth-child(4),
+.wb-isolated-canvas.wb-anim-enabled .minimal-service-item:nth-child(4),
+.wb-isolated-canvas.wb-anim-enabled .easy-card:nth-child(4),
+.wb-isolated-canvas.wb-anim-enabled .accountax-card:nth-child(4),
+.wb-isolated-canvas.wb-anim-enabled .fortax-card:nth-child(4) {
+  animation-delay: 0.30s;
+}
+
+/* ─── Card Hover Micro-Interactions ──────────────── */
+.wb-isolated-canvas.wb-hover-enabled .apex-service-card,
+.wb-isolated-canvas.wb-hover-enabled .fintech-card,
+.wb-isolated-canvas.wb-hover-enabled .trust-practice-card,
+.wb-isolated-canvas.wb-hover-enabled .minimal-service-item,
+.wb-isolated-canvas.wb-hover-enabled .easy-card,
+.wb-isolated-canvas.wb-hover-enabled .accountax-card,
+.wb-isolated-canvas.wb-hover-enabled .fortax-card,
+.wb-isolated-canvas.wb-hover-enabled .apex-calc-card,
+.wb-isolated-canvas.wb-hover-enabled .apex-due-card,
+.wb-isolated-canvas.wb-hover-enabled .apex-testimonial-card,
+.wb-isolated-canvas.wb-hover-enabled .fintech-stat-card,
+.wb-isolated-canvas.wb-hover-enabled .trust-testimonial-card,
+.wb-isolated-canvas.wb-hover-enabled .easy-calc-card,
+.wb-isolated-canvas.wb-hover-enabled .accountax-testimonial,
+.wb-isolated-canvas.wb-hover-enabled .fortax-feature-card {
+  transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.32s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.32s ease;
+  will-change: transform, box-shadow;
+}
+
+.wb-isolated-canvas.wb-hover-enabled .apex-service-card:hover,
+.wb-isolated-canvas.wb-hover-enabled .fintech-card:hover,
+.wb-isolated-canvas.wb-hover-enabled .trust-practice-card:hover,
+.wb-isolated-canvas.wb-hover-enabled .minimal-service-item:hover,
+.wb-isolated-canvas.wb-hover-enabled .easy-card:hover,
+.wb-isolated-canvas.wb-hover-enabled .accountax-card:hover,
+.wb-isolated-canvas.wb-hover-enabled .fortax-card:hover,
+.wb-isolated-canvas.wb-hover-enabled .apex-calc-card:hover,
+.wb-isolated-canvas.wb-hover-enabled .apex-due-card:hover,
+.wb-isolated-canvas.wb-hover-enabled .apex-testimonial-card:hover,
+.wb-isolated-canvas.wb-hover-enabled .fintech-stat-card:hover,
+.wb-isolated-canvas.wb-hover-enabled .trust-testimonial-card:hover,
+.wb-isolated-canvas.wb-hover-enabled .easy-calc-card:hover,
+.wb-isolated-canvas.wb-hover-enabled .accountax-testimonial:hover,
+.wb-isolated-canvas.wb-hover-enabled .fortax-feature-card:hover {
+  transform: translateY(-6px) scale(1.012);
+  box-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.14), 0 6px 16px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* ─── Modern Glassmorphism System ──────────────── */
+.wb-isolated-canvas.wb-glass-enabled .apex-header,
+.wb-isolated-canvas.wb-glass-enabled .fintech-nav,
+.wb-isolated-canvas.wb-glass-enabled .trust-header,
+.wb-isolated-canvas.wb-glass-enabled .minimal-header,
+.wb-isolated-canvas.wb-glass-enabled .easy-header,
+.wb-isolated-canvas.wb-glass-enabled .accountax-header,
+.wb-isolated-canvas.wb-glass-enabled .fortax-header {
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  background: rgba(255, 255, 255, 0.82) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+
+.wb-isolated-canvas.wb-glass-enabled .apex-service-card,
+.wb-isolated-canvas.wb-glass-enabled .fintech-card,
+.wb-isolated-canvas.wb-glass-enabled .trust-practice-card,
+.wb-isolated-canvas.wb-glass-enabled .easy-card,
+.wb-isolated-canvas.wb-glass-enabled .accountax-card,
+.wb-isolated-canvas.wb-glass-enabled .fortax-card {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.88);
+}
+
+/* ─── Glowing Badges & Pulse Accents ──────────────── */
+.wb-isolated-canvas.wb-glow-enabled .apex-badge,
+.wb-isolated-canvas.wb-glow-enabled .fintech-hero-tag,
+.wb-isolated-canvas.wb-glow-enabled .trust-badge,
+.wb-isolated-canvas.wb-glow-enabled .easy-badge,
+.wb-isolated-canvas.wb-glow-enabled .accountax-badge,
+.wb-isolated-canvas.wb-glow-enabled .fortax-badge {
+  animation: wbPulseGlow 2.8s infinite;
+  box-shadow: 0 0 12px rgba(15, 110, 86, 0.25);
+}
+
+/* ─── Interactive Button Physics ──────────────── */
+.wb-isolated-canvas a,
+.wb-isolated-canvas button {
+  transition: all 0.24s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wb-isolated-canvas.wb-hover-enabled button:hover:not(:disabled),
+.wb-isolated-canvas.wb-hover-enabled a.apex-btn-primary:hover,
+.wb-isolated-canvas.wb-hover-enabled a.fintech-btn-primary:hover,
+.wb-isolated-canvas.wb-hover-enabled a.trust-btn-primary:hover,
+.wb-isolated-canvas.wb-hover-enabled a.minimal-btn-primary:hover,
+.wb-isolated-canvas.wb-hover-enabled a.easy-btn-primary:hover,
+.wb-isolated-canvas.wb-hover-enabled a.accountax-btn-primary:hover,
+.wb-isolated-canvas.wb-hover-enabled a.fortax-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -4px rgba(15, 110, 86, 0.35);
+}
+
+.wb-isolated-canvas.wb-hover-enabled button:active:not(:disabled),
+.wb-isolated-canvas.wb-hover-enabled a.apex-btn-primary:active,
+.wb-isolated-canvas.wb-hover-enabled a.fintech-btn-primary:active,
+.wb-isolated-canvas.wb-hover-enabled a.trust-btn-primary:active,
+.wb-isolated-canvas.wb-hover-enabled a.minimal-btn-primary:active,
+.wb-isolated-canvas.wb-hover-enabled a.easy-btn-primary:active,
+.wb-isolated-canvas.wb-hover-enabled a.accountax-btn-primary:active,
+.wb-isolated-canvas.wb-hover-enabled a.fortax-btn-primary:active {
+  transform: translateY(0);
+}
