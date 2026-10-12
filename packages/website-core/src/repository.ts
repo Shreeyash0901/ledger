@@ -17,15 +17,15 @@ export function getDefaultWebsiteConfig(firmId: string, templateId: TemplateId =
     version: 1,
     templateId,
     branding: {
-      firmName: "Ashish Shahu & Co.",
+      firmName: "RKAS & CO",
       tagline: "Chartered Accountants & Financial Advisors",
       registrationNumber: "Firm Reg. No. XXXXXX",
-      phone: "+91 00000 00000",
+      phone: "+91 77438 59000",
       email: "office@example-cafirm.com",
-      address: "101, Sample Business Hub, Financial District, Mumbai 400001",
+      address: "102A, SHREYAS, PLOT NO. 277, Shankar Nagar, Dharampeth, Nagpur, Maharashtra 440010",
       workingHours: "Mon – Sat: 10:00 AM – 6:30 PM",
-      logoUrl: "",
-      faviconUrl: "",
+      logoUrl: "/logo.png",
+      faviconUrl: "/favicon.png",
     },
     theme: {
       primaryColor: "#0f6e56",
@@ -69,7 +69,7 @@ export function getDefaultWebsiteConfig(firmId: string, templateId: TemplateId =
     },
     footer: {
       layout: "multi-column",
-      copyrightText: "© 2026 Ashish Shahu & Co. Chartered Accountants. All rights reserved.",
+      copyrightText: "© 2026 RKAS & CO Chartered Accountants. All rights reserved.",
       icaiDisclaimer: true,
       disclaimerText: "Standard Professional Disclaimer: In accordance with the Chartered Accountants Act, 1949 and guidelines issued by the regulatory council, this website is designed solely for providing informational facts about the firm and its areas of practice. It does not constitute an advertisement, personal communication, solicitation, or invitation to offer work.",
       quickLinkGroups: [
@@ -97,11 +97,11 @@ export function getDefaultWebsiteConfig(firmId: string, templateId: TemplateId =
       ],
     },
     seo: {
-      siteTitle: "Ashish Shahu & Co. | Chartered Accountants",
+      siteTitle: "RKAS & CO | Chartered Accountants",
       metaDescription: "Professional Tax, Audit, GST & Company Incorporation Advisory for Modern Enterprises in India.",
       socialShareImageUrl: "",
       noIndexInDraft: true,
-      metaTitle: "Ashish Shahu & Co. | Chartered Accountants",
+      metaTitle: "RKAS & CO | Chartered Accountants",
     },
     pages: [
       {

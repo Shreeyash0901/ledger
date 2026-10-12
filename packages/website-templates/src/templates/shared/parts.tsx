@@ -209,7 +209,12 @@ export function SiteFooter({ config }: { config: WebsiteConfig }) {
     <footer className="tf-footer">
       <div className="tf-footer-grid">
         <div>
-          <div className="tf-footer-brand">{firm}</div>
+          <div className="tf-footer-brand" style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
+            {config.branding.logoUrl && (
+              <img src={config.branding.logoUrl} alt={firm} style={{ maxHeight: 36, width: "auto", objectFit: "contain", background: "#fff", borderRadius: 4, padding: "2px 4px" }} />
+            )}
+            <span>{firm}</span>
+          </div>
           <p>{config.branding.tagline || "Accounting, tax and compliance handled by chartered accountants."}</p>
           <div className="tf-footer-contact">
             <span><MapPin size={14} /> {config.branding.address || SHARED_FIRM_CONTACT.primaryOffice}</span>

@@ -2,12 +2,12 @@ import { z } from "zod";
 import { isSafeLink } from "./linkUtils";
 
 export const BrandingSchema = z.object({
-  firmName: z.string().default("Ashish Shahu & Co."),
+  firmName: z.string().default("RKAS & CO"),
   tagline: z.string().default(""),
   registrationNumber: z.string().default("Firm Reg. No. XXXXXX"),
-  phone: z.string().default("+91 00000 00000"),
+  phone: z.string().default("+91 77438 59000"),
   email: z.string().default("office@example-cafirm.com"),
-  address: z.string().default("101, Sample Business Hub, Financial District, Mumbai 400001"),
+  address: z.string().default("102A, SHREYAS, PLOT NO. 277, Shankar Nagar, Dharampeth, Nagpur, Maharashtra 440010"),
   workingHours: z.string().default("Mon – Sat: 10:00 AM – 6:30 PM"),
   logoUrl: z.string().optional().default(""),
   faviconUrl: z.string().optional().default(""),
@@ -133,7 +133,7 @@ export const FooterConfigSchema = z.object({
 });
 
 export const SeoConfigSchema = z.object({
-  siteTitle: z.string().max(60, "Site title max 60 characters").default("Ashish Shahu & Co. | Chartered Accountants"),
+  siteTitle: z.string().max(60, "Site title max 60 characters").default("RKAS & CO | Chartered Accountants"),
   metaDescription: z.string().max(160, "Meta description max 160 characters").default("Professional Tax, Audit, GST & Compliance Advisory for Modern Enterprises in India."),
   socialShareImageUrl: HttpsOnlyUrlSchema.optional(),
   noIndexInDraft: z.boolean().default(true),

@@ -19,12 +19,11 @@ export function LedgerTemplate({ config }: LedgerTemplateProps) {
     <div className="ledger-root">
       <header className="lg-header">
         <div className="lg-header-inner">
-          <a href="#home" className="lg-brand">
-            {config.branding.logoUrl ? (
-              <img src={config.branding.logoUrl} alt={firm} style={{ maxHeight: 34 }} />
-            ) : (
-              firm
+          <a href="#home" className="lg-brand" style={{ display: "inline-flex", alignItems: "center", gap: 12 }}>
+            {config.branding.logoUrl && (
+              <img src={config.branding.logoUrl} alt={firm} style={{ maxHeight: 42, width: "auto", objectFit: "contain" }} />
             )}
+            <span>{firm}</span>
           </a>
           <nav className="lg-nav" aria-label="Main">
             <NavItems

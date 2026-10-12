@@ -215,9 +215,9 @@ export const SHARED_CLIENT_REVIEWS: SharedClientReview[] = [
 ];
 
 export const SHARED_FIRM_CONTACT: SharedFirmContact = {
-  primaryOffice: "101, Sample Business Hub, Financial District, Mumbai 400001",
+  primaryOffice: "102A, SHREYAS, PLOT NO. 277, Shankar Nagar, Dharampeth, Nagpur, Maharashtra 440010",
   email: "office@example-cafirm.com",
-  phone: "+91 00000 00000",
+  phone: "+91 77438 59000",
   workingHours: "Monday to Saturday: 10:00 AM – 6:30 PM",
   icaiRegistration: "Firm Reg. No. XXXXXX",
 };
